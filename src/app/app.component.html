@@ -1,10 +1,13 @@
 <div class="app-container">
-
     <div class="input-container">
-        <input style="margin-right: 5px" [(ngModel)]="spName" id="store">
+        <input style="margin-right: 5px" [(ngModel)]="spName" id="store" />
         <button (click)="execSp()" class="pure-button">Ejecutar</button>
     </div>
 
+    <div class="error" *ngIf="error">
+        <span>ERROR:</span>
+        <pre>{{ error | json }}</pre>
+    </div>
 
     <table *ngIf="columns && data" class="pure-table table-container">
         <thead>
@@ -23,5 +26,4 @@
             </tr>
         </tbody>
     </table>
-
 </div>
