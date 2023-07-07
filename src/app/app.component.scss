@@ -1,11 +1,28 @@
 .app-container {
     margin: 20px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
 
     .input-container {
-        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 50px;
+        padding-bottom: 20px;
+
+        .left-container {
+            width: 100%;
+        }
+        .center-container {
+            width: 100%;
+            button {
+                margin-left: 10px;
+            }
+        }
+        .right-container {
+            display: flex;
+            justify-content: end;
+            width: 100%;
+            margin-right: 70px;
+        }
     }
 
     .table-container {
@@ -21,6 +38,10 @@
             text-align: left;
         }
     }
+}
+
+table {
+    width: 100%;
 }
 
 .error {

@@ -1,4 +1,5 @@
 export const environment = {
-    production: true,
-    WS_URL: 'http://appsantafe.myddns.me:3001'
+    production: false,
+    PORT1: "http://api.mesastesti.com.ar:3001",
+    PORT2: "http://api.mesastesti.com.ar:3002",
 };
