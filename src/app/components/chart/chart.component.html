@@ -1,0 +1,13 @@
+<div class="error" *ngIf="error">
+    <span>ERROR:</span>
+    <pre>{{ error | json }}</pre>
+</div>
+
+<div class="chart-container">
+    <div class="right-container">
+        <button class="ejecutar-boton" mat-raised-button color="primary" (click)="getData()">
+            Actualizar
+        </button>
+    </div>
+    <canvas id="MyChart">{{ chart }}</canvas>
+</div>

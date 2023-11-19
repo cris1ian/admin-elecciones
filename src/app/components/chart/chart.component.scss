@@ -1,0 +1,17 @@
+.error {
+    span {
+        font-weight: bold;
+        color: red;
+    }
+}
+
+.chart-container {
+    padding-top: 2rem;
+}
+
+.right-container {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin-right: 70px;
+}
