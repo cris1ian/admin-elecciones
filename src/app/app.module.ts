@@ -9,9 +9,13 @@ import { MatButtonModule } from "@angular/material";
 import { MatInputModule } from "@angular/material/input";
 import { MatTableModule } from "@angular/material/table";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
+import { MatSelectModule } from "@angular/material/select";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { TablaSpComponent } from './components/tabla-sp/tabla-sp.component';
+import { ChartComponent } from './components/chart/chart.component';
 
 @NgModule({
-    declarations: [AppComponent],
+    declarations: [AppComponent, TablaSpComponent, ChartComponent],
     imports: [
         BrowserModule,
         HttpClientModule,
@@ -21,6 +25,8 @@ import { MatSlideToggleModule } from "@angular/material/slide-toggle";
         MatInputModule,
         MatTableModule,
         MatSlideToggleModule,
+        MatSelectModule,
+        MatFormFieldModule,
     ],
     providers: [],
     bootstrap: [AppComponent],

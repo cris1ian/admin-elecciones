@@ -1,0 +1,61 @@
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    padding-bottom: 20px;
+
+    .left-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .center-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .right-container {
+        display: flex;
+        justify-content: end;
+        width: 100%;
+        margin-right: 70px;
+    }
+}
+
+.table-container {
+    margin: 0 auto;
+    min-width: 70%;
+    margin-top: 15px;
+
+    thead tr th {
+        text-transform: capitalize;
+    }
+
+    tbody tr th {
+        text-align: left;
+    }
+}
+
+.ejecutar-boton {
+    margin-left: 10px;
+}
+
+.flex-horizontal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    width: 100%;
+}
+
+.error {
+    span {
+        font-weight: bold;
+        color: red;
+    }
+}

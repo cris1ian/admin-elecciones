@@ -1,81 +1,10 @@
 <div class="app-container">
-    <div class="input-container">
-        <div class="left-container"></div>
-        <div class="center-container">
-            <mat-form-field class="example-full-width">
-                <input
-                    matInput
-                    style="margin-right: 5px"
-                    placeholder="Stored Procedure"
-                    [(ngModel)]="spName"
-                    id="store"
-                />
-            </mat-form-field>
-
-            <button
-                mat-raised-button
-                color="primary"
-                (click)="execSp()"
-                [disabled]="!spName"
-            >
-                Ejecutar
-            </button>
-        </div>
-
-        <div class="right-container">
-            <mat-slide-toggle
-                (change)="execSp()"
-                [(ngModel)]="esProvinciales"
-                color="primary"
-                labelPosition="before"
-            >
-                {{ esProvinciales ? "Provinciales" : "Rosario" }}
-            </mat-slide-toggle>
-        </div>
+    <div class="toggle-container">
+        <mat-slide-toggle [(ngModel)]="renderChart" color="primary" labelPosition="after">
+            {{ renderChart ? "Dashboard" : "Tablas" }}
+        </mat-slide-toggle>
     </div>
 
-    <div class="error" *ngIf="error">
-        <span>ERROR:</span>
-        <pre>{{ error | json }}</pre>
-    </div>
-
-    <ng-container *ngIf="!error">
-        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-            <!--- Note that these columns can be defined in any order.
-              The actual rendered columns are set as a property on the row definition" -->
-
-            <!-- Punto Column -->
-            <ng-container matColumnDef="punto">
-                <th mat-header-cell *matHeaderCellDef>Punto</th>
-                <td mat-cell *matCellDef="let element">
-                    {{ element.punto }}
-                </td>
-            </ng-container>
-
-            <!-- Comp Column -->
-            <ng-container matColumnDef="comp">
-                <th mat-header-cell *matHeaderCellDef>Comp</th>
-                <td mat-cell *matCellDef="let element">{{ element.comp }}</td>
-            </ng-container>
-
-            <!-- Establecimiento Column -->
-            <ng-container matColumnDef="Establecimiento">
-                <th mat-header-cell *matHeaderCellDef>Establecimiento</th>
-                <td mat-cell *matCellDef="let element">
-                    {{ element.Establecimiento }}
-                </td>
-            </ng-container>
-
-            <!-- Informados Column -->
-            <ng-container matColumnDef="Informados">
-                <th mat-header-cell *matHeaderCellDef>Informados</th>
-                <td mat-cell *matCellDef="let element">
-                    {{ element.Informados }}
-                </td>
-            </ng-container>
-
-            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-        </table>
-    </ng-container>
+    <app-tabla-sp *ngIf="!renderChart"></app-tabla-sp>
+    <app-chart *ngIf="renderChart"></app-chart>
 </div>
