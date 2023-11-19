@@ -5,6 +5,15 @@
 
 <div class="chart-container">
     <div class="right-container">
+        <mat-form-field>
+            <mat-label>Circuitos</mat-label>
+            <mat-select [formControl]="circuitos" multiple>
+                @for (circuito of circuitosLista; track circuito.id) {
+                    <mat-option [value]="circuito">{{circuito.descripcion}}</mat-option>
+                }
+            </mat-select>
+        </mat-form-field>
+
         <button class="ejecutar-boton" mat-raised-button color="primary" (click)="getData()">
             Actualizar
         </button>

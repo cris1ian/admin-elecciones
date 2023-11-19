@@ -11,7 +11,8 @@
 
 .right-container {
     display: flex;
-    justify-content: end;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
     margin-right: 70px;
 }
